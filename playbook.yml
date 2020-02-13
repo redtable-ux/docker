@@ -11,7 +11,7 @@
         name: python-docker
         state: present
       when:
-        - ansible-distribution == "Ubuntu"
+        - ansible_distribution == "Ubuntu"
     - name: pull image
       docker_image:
         name: redtable/apache-ubuntu:latest
