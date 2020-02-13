@@ -8,14 +8,14 @@
         - ansible_distribution == "CentOS"
     - name: install python-docker ubuntu
       apt:
-          name: python-docker
-          state: present
+        name: python-docker
+        state: present
       when:
         - ansible-distribution == "Ubuntu"
     - name: pull image
       docker_image:
-          name: redtable/apache-ubuntu:latest
-          source: pull
+        name: redtable/apache-ubuntu:latest
+        source: pull
     - name: create container
       docker_container:
            name: container_by_jenkins
